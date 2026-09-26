@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name": "Pixel Track for Thunderbird",
+  "description": "Adds self-hosted pixel-track tracking pixels to outgoing messages.",
+  "version": "1.0.0",
+  "applications": {
+    "gecko": {
+      "id": "pixel-track@tinystrack",
+      "strict_min_version": "128.0"
+    }
+  },
+  "permissions": [
+    "storage",
+    "notifications",
+    "accountsRead",
+    "compose",
+    "compose.send",
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": {
+    "scripts": [
+      "pixel-utils.js",
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "compose_action": {
+    "default_title": "Insert tracking pixel",
+    "default_icon": {
+      "16": "icons/pixel-16.svg",
+      "32": "icons/pixel-32.svg"
+    }
+  },
+  "icons": {
+    "16": "icons/pixel-16.svg",
+    "32": "icons/pixel-32.svg",
+    "64": "icons/pixel-64.svg"
+  }
+}

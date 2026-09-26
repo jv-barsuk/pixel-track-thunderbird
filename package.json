@@ -1,0 +1,9 @@
+{
+  "name": "pixel-track-thunderbird",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node --test test/pixel-utils.test.js",
+    "package": "rm -f pixel-track-thunderbird.xpi && zip -q -r pixel-track-thunderbird.xpi manifest.json background.js pixel-utils.js options.html options.css options.js icons README.md"
+  }
+}

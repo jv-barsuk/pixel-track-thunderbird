@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pixel Track settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <h1>Pixel Track</h1>
+    <form id="settings">
+      <label>Tracker host
+        <input id="trackerHost" type="url" placeholder="https://track.example.com" required>
+      </label>
+      <p class="hint">Use the base URL only. The addon appends <code>/api/pixels</code> and <code>/t/{token}</code>.</p>
+      <fieldset>
+        <legend>Tracker API Basic Auth</legend>
+        <label>Username <input id="username" autocomplete="username"></label>
+        <label>Password <input id="password" type="password" autocomplete="current-password"></label>
+      </fieldset>
+      <fieldset>
+        <legend>Automatic insertion</legend>
+        <label class="check"><input id="addToAll" type="checkbox"> Add a pixel to all outgoing mails</label>
+        <label class="check"><input id="accountEnabled" type="checkbox"> Add pixels to all mails from selected accounts</label>
+        <label>Account identities
+          <select id="accountIdentityIds" multiple size="5"></select>
+        </label>
+        <label class="check"><input id="recipientEnabled" type="checkbox"> Add pixels to mails with selected recipients</label>
+        <label>Recipient addresses
+          <textarea id="recipientAddresses" rows="4" placeholder="person@example.com&#10;another@example.com"></textarea>
+        </label>
+        <p class="hint">Enter one address per line or separate addresses with commas.</p>
+      </fieldset>
+      <p>Use the compose-window toolbar button to insert a pixel manually. Manual insertion always creates a new pixel.</p>
+      <button type="submit">Save settings</button>
+      <span id="status" role="status"></span>
+    </form>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>
