@@ -28,6 +28,11 @@ only when creating a pixel and can be omitted; the image URL is unauthenticated.
 * Add tracking pixel depending on the rules 
 * Add a tracking pixel manually using the compose toolbar button
 
+### Screenshots
+<img src="images/screenshot-settings.png" alt="Settings dialog" style="max-width:500px;">
+
+<img src="images/screenshot-new-message.png" alt="Compose toolbar button" style="max-width:500px;">
+
 ## Development
 Build and package the addon:
 ```sh
